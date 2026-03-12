@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>БЕСТ‑ЛАБ • Лабораторное оборудование</title>
+  <meta name="description" content="БЕСТ‑ЛАБ — официальный дилер лабораторного оборудования. Инфракрасные анализаторы, сушильные шкафы, мельницы, белизномеры. Пуско‑наладка, сервисное обслуживание, обучение. Доставка по всей России.">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="shortcut icon" href="assets/logo.png" type="image/png">
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <div class="logo">
+        <img class="logo-img" src="assets/logo.png" alt="">
+      <h1>БЕСТ‑ЛАБ</h1>
+    </div>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li><a href="#about" class="nav__link">О нас</a></li>
+        <li><a href="#catalog" class="nav__link">Оборудование</a></li>
+        <li><a href="#services" class="nav__link">Услуги</a></li>
+        <li><a href="#clients" class="nav__link">Клиенты</a></li>
+        <li><a href="#contacts" class="nav__link">Контакты</a></li>
+      </ul>
+    </nav>
+    <div class="header-contacts">
+      <a href="tel:+79290013328" aria-label="Позвонить"><i class="fas fa-phone-alt"></i></a>
+      <a href="https://t.me/Slewin30" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+      <span class="phone-number">+7 (929) 001-33-28</span>
+    </div>
+    <button class="burger" id="burgerBtn" aria-label="Меню">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Мобильное меню -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul class="nav__list">
+    <li><a href="#about" class="nav__link" onclick="closeMenu()">О нас</a></li>
+    <li><a href="#catalog" class="nav__link" onclick="closeMenu()">Оборудование</a></li>
+    <li><a href="#services" class="nav__link" onclick="closeMenu()">Услуги</a></li>
+    <li><a href="#clients" class="nav__link" onclick="closeMenu()">Клиенты</a></li>
+    <li><a href="#contacts" class="nav__link" onclick="closeMenu()">Контакты</a></li>
+  </ul>
+  <div class="mobile-contacts">
+    <a href="tel:+79290013328"><i class="fas fa-phone-alt"></i> +7 (929) 001-33-28</a>
+    <a href="https://t.me/Slewin30" target="_blank"><i class="fab fa-telegram"></i> @Slewin30</a>
+    <p><i class="fas fa-map-marker-alt"></i> Белгород, ул. Губкина 51</p>
+  </div>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<!-- Hero с ВИДЕО ФОНОМ -->
+<section class="hero" id="about">
+  <video class="hero-video" autoplay muted loop playsinline>
+    <source src="assets/bg.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay"></div>
+  
+  <div class="container">
+    <div class="hero-content">
+      <span class="hero-badge">
+        <i class="fas fa-check-circle"></i>
+        Официальный дилер
+      </span>
+      
+      <h1 class="hero-title">
+        Надёжность и <span class="hero-accent">продуктивность</span><br>
+        вашей лаборатории
+      </h1>
+      
+      <p class="hero-description">
+        Эксклюзивные представители и сервисный центр лабораторного оборудования. Полный цикл: подбор, поставка, сервис.
+      </p>
+      
+      <div class="hero-buttons">
+        <a href="#catalog" class="btn btn--primary">
+          <i class="fas fa-microscope"></i>
+          Перейти к оборудованию
+        </a>
+        <a href="https://t.me/Slewin30" target="_blank" class="btn btn--telegram">
+          <i class="fab fa-telegram"></i>
+          Написать в Telegram
+        </a>
+      </div>
+    </div>
+    
+    <!-- Преимущества в виде мини-карточек -->
+    <div class="hero-features">
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="feature-text">
+          <h4>Комплексный подход</h4>
+          <p>От подбора до сервиса</p>
+        </div>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-headset"></i>
+        </div>
+        <div class="feature-text">
+          <h4>Поддержка 24/7</h4>
+          <p>Всегда на связи</p>
+        </div>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-truck"></i>
+        </div>
+        <div class="feature-text">
+          <h4>Точные сроки</h4>
+          <p>Доставка вовремя</p>
+        </div>
+      </div>
+      
+      <div class="feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-file-contract"></i>
+        </div>
+        <div class="feature-text">
+          <h4>По нормативам</h4>
+          <p>ГОСТ, ISO, GMP</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Каталог оборудования -->
+<section id="catalog">
+  <div class="container">
+    <h2 class="section-title">Оборудование</h2>
+    <div class="catalog-grid" id="catalogGrid"></div>
+  </div>
+</section>
+
+<!-- Услуги -->
+<section id="services">
+  <div class="container">
+    <h2 class="section-title">Сервис и поддержка</h2>
+    <div class="services-grid">
+      
+      <!-- Пуско‑наладка -->
+      <div class="service-item">
+        <h3>Пуско‑наладка</h3>
+        <p class="service-price">от 60 000 ₽</p>
+        <div class="service-features">
+          <p class="service-desc">Ввод оборудования в эксплуатацию с гарантией стабильной работы:</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Установка, проверка комплектации</li>
+            <li><i class="fas fa-check-circle"></i> Подключение и проверка параметров</li>
+            <li><i class="fas fa-check-circle"></i> Валидация градуировочных моделей</li>
+            <li><i class="fas fa-check-circle"></i> Обучение персонала</li>
+          </ul>
+          <div class="service-note">
+            <p><i class="fas fa-info-circle"></i> Проводится на территории заказчика</p>
+          </div>
+        </div>
+        <a href="#contacts" class="btn">Заказать</a>
+      </div>
+      
+      <!-- Техобслуживание -->
+      <div class="service-item">
+        <h3>Техобслуживание</h3>
+        <p class="service-price">от 55 000 ₽</p>
+        <div class="service-features">
+          <p class="service-desc">Продлеваем срок службы и предотвращаем поломки:</p>
+          <ul class="service-list">
+            <li><i class="fas fa-check-circle"></i> Плановая диагностика всех узлов</li>
+            <li><i class="fas fa-check-circle"></i> Очистка, смазка, замена расходников</li>
+            <li><i class="fas fa-check-circle"></i> Повторная калибровка и метрология</li>
+            <li><i class="fas fa-check-circle"></i> Обновление ПО и профилактика</li>
+          </ul>
+          <div class="service-note">
+            <p><i class="fas fa-info-circle"></i> Рекомендуется не реже 1 раза в 2 года</p>
+          </div>
+        </div>
+        <a href="#contacts" class="btn">Заказать</a>
+      </div>
+      
+      <!-- Три фотографии -->
+      <div class="service-item service-photos">
+        <div class="photos-grid">
+          <img src="assets/usluga1.jpg" alt="Пуско-наладка" onerror="this.src='https://via.placeholder.com/400x300/1e2329/e79a27?text=Фото+1'">
+          <img src="assets/usluga2.jpg" alt="Техобслуживание" onerror="this.src='https://via.placeholder.com/400x300/1e2329/e79a27?text=Фото+2'">
+          <img src="assets/usluga3.jpg" alt="Работа специалистов" onerror="this.src='https://via.placeholder.com/400x300/1e2329/e79a27?text=Фото+3'">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- CTA БЛОК -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-block">
+      <h3>Нужна консультация по подбору?</h3>
+      <p class="cta-text">Напишите нам в Telegram — ответим в течение часа</p>
+      <a href="https://t.me/Slewin30" target="_blank" class="btn btn--telegram">
+        <i class="fab fa-telegram"></i> Перейти в Telegram
+      </a>
+      <img class="cta-img" src="assets/cta-img.png" alt="">
+    </div>
+  </div>
+</section>
+
+<!-- Нам доверяют (БЕГУЩАЯ ЛЕНТА) -->
+<section id="clients" class="clients-section">
+  <div class="container">
+    <h2 class="section-title">Нам доверяют</h2>
+    <div class="clients-track" id="clientsTrack"></div>
+  </div>
+</section>
+
+<!-- Контакты -->
+<section id="contacts" class="contacts-section">
+  <div class="container">
+    <h2 class="section-title">Контакты</h2>
+  </div>
+  
+  <div class="contacts-map-wrapper">
+    <div class="contacts-map-container">
+      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A485c6decb9e1297d26757389e91619f3bfc7df60ff15abab3aa1628285e53839&amp;source=constructor" width="100%" height="600" frameborder="0"></iframe>
+      <div class="contacts-info-card">
+        <div class="contacts-info-content">
+          <h3>ООО «БЕСТ-ЛАБ»</h3>
+          <p><i class="fas fa-map-marker-alt"></i> г. Белгород, ул. Губкина 51</p>
+          <p><i class="fas fa-phone-alt"></i> <a href="tel:+79290013328">+7 (929) 001-33-28</a></p>
+          <p><i class="fab fa-telegram"></i> <a href="https://t.me/Slewin30" target="_blank">@Slewin30</a></p>
+          <a href="https://t.me/Slewin30" target="_blank" class="btn btn--telegram">
+            <i class="fab fa-telegram"></i> Написать в Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 ООО «БЕСТ‑ЛАБ». Все права защищены. Официальный дилер.</p>
+  </div>
+</footer>
+
+<!-- Модальное окно С ДВУМЯ КОЛОНКАМИ -->
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="modal-close" id="closeModal">&times;</span>
+    
+    <div class="modal-layout">
+      <!-- Левая колонка: Название, Цена, Слайдер, Кнопка -->
+      <div class="modal-left">
+        
+        <!-- СЛАЙДЕР -->
+        <div class="slider-container">
+          <button class="slider-prev" id="slidePrev" aria-label="Предыдущий"><i class="fas fa-chevron-left"></i></button>
+          <div class="slider-track" id="sliderTrack"></div>
+          <button class="slider-next" id="slideNext" aria-label="Следующий"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        
+        <div id="modalProductTitle" class="modal-product-title">ИНФРАСКАН 3151</div>
+        <div id="modalProductPrice" class="modal-product-price">2 550 000 ₽</div>
+        
+        <a href="https://t.me/Slewin30" target="_blank" class="btn">
+          <i class="fab fa-telegram"></i> Запросить КП
+        </a>
+      </div>
+      
+      <!-- Правая колонка: Описание и Характеристики -->
+      <div class="modal-right">
+        <div class="modal-desc" id="modalDesc"></div>
+        <div class="modal-features" id="modalFeatures"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
