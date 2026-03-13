@@ -135,6 +135,40 @@
     { name: "Завод премиксов №1", logo: "assets/logo-zavod.png" }
   ];
 
+  // Данные для акций
+  const promos = [
+    {
+      title: "Трейд-ин оборудования",
+      description: "Обменяйте ваше оборудование на новое с доплатой.",
+      icon: "fa-exchange-alt",
+      color: "#e79a27"
+    },
+    {
+      title: "Выкуп вашего ИК",
+      description: "Продайте нам ваше оборудование по выгодной цене. Быстрая оценка и оплата.",
+      icon: "fa-money-bill-wave",
+      color: "#e79a27"
+    },
+    {
+      title: "ТО за 3 часа и год гарантии",
+      description: "Техобслуживание за 3 часа с выездом к вам. Год гарантии!",
+      icon: "fa-clock",
+      color: "#e79a27"
+    },
+    {
+      title: "Обмен старого ИК на новый",
+      description: "Специальная программа обмена.",
+      icon: "fa-sync-alt",
+      color: "#e79a27"
+    },
+    {
+      title: "Приезд специалиста в любую точку РФ",
+      description: "Наши инженеры выезжают в любой регион России.",
+      icon: "fa-map-marker-alt",
+      color: "#e79a27"
+    }
+  ];
+
   // ===== РЕНДЕР КАТАЛОГА =====
   function renderCatalog() {
     const catalogGrid = document.getElementById('catalogGrid');
@@ -190,6 +224,64 @@
     });
     
     clientsTrack.innerHTML = html;
+  }
+
+  // ===== ФУНКЦИЯ РЕНДЕРА АКЦИЙ =====
+  function renderPromos() {
+    const swiperWrapper = document.querySelector('.promo-swiper .swiper-wrapper');
+    if (!swiperWrapper) return;
+    
+    let slidesHtml = '';
+    
+    promos.forEach((promo, index) => {
+      slidesHtml += `
+        <div class="swiper-slide">
+          <div class="promo-card" style="border-top: 4px solid ${promo.color}">
+            <div class="promo-icon" style="background: ${promo.color}20; color: ${promo.color}">
+              <i class="fas ${promo.icon}"></i>
+            </div>
+            <h3 class="promo-title">${promo.title}</h3>
+            <p class="promo-description">${promo.description}</p>
+            <a href="https://t.me/Slewin30" target="_blank" class="btn promo-btn" style="background: ${promo.color}">Узнать подробнее</a>
+          </div>
+        </div>
+      `;
+    });
+    
+    swiperWrapper.innerHTML = slidesHtml;
+    
+    initPromoSlider();
+  }
+
+  // ===== СЛАЙДЕР АКЦИЙ (SWIPER) =====
+  function initPromoSlider() {
+    new Swiper('.promo-swiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.promo-swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.promo-swiper-next',
+        prevEl: '.promo-swiper-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        }
+      }
+    });
   }
 
   // ===== МОДАЛКА СО СЛАЙДЕРОМ =====
@@ -359,6 +451,7 @@
   window.addEventListener('load', () => {
     renderCatalog();
     renderClients();
+    renderPromos();
     initModal();
     initBurger();
     initSmoothScroll();

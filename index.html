@@ -14,6 +14,7 @@
   <link rel="shortcut icon" href="assets/logo.png" type="image/png">
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 <body>
 
@@ -205,6 +206,24 @@
   </div>
 </section>
 
+<!-- Акции -->
+<section class="promo-section">
+  <div class="container">
+    <h2 class="section-title">Акции и специальные предложения</h2>
+    
+    <div class="swiper promo-swiper">
+      <div class="swiper-wrapper" id="promoSliderTrack">
+        <!-- Слайды будут добавлены через JS -->
+      </div>
+      
+      <div class="swiper-pagination promo-swiper-pagination"></div>
+      
+      <div class="swiper-button-prev promo-swiper-prev"></div>
+      <div class="swiper-button-next promo-swiper-next"></div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA БЛОК -->
 <section class="cta-section">
   <div class="container">
@@ -291,6 +310,7 @@
 </div>
 
 <!-- JS -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
